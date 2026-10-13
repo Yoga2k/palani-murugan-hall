@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ஸ்ரீ பழனி முருகன் விழா அரங்கம் | Sri Palani Murugan Vizha Arangam</title>
+  <meta name="description" content="ஸ்ரீ பழனி முருகன் விழா அரங்கம் - வல்லவாரியில் திருமணம், காதணி, மொய் விருந்து மற்றும் அனைத்து குடும்ப விசேஷங்களுக்கான சிறந்த மண்டபம். Vallavari, Thanjavur District, Tamil Nadu 614801." />
+  <meta name="keywords" content="Sri Palani Murugan Vizha Arangam, Vallavari function hall, marriage hall Peravurani, Thanjavur wedding hall, Tamil Nadu mandapam" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700;900&family=Noto+Sans+Tamil:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="om-symbol">🕉</span>
+        <div class="brand-text">
+          <span class="brand-tamil">ஸ்ரீ பழனி முருகன்</span>
+          <span class="brand-sub">விழா அரங்கம்</span>
+        </div>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" id="nav-home">முகப்பு</a></li>
+        <li><a href="#about" id="nav-about">அறிமுகம்</a></li>
+        <li><a href="#events" id="nav-events">நிகழ்வுகள்</a></li>
+        <li><a href="#features" id="nav-features">வசதிகள்</a></li>
+        <li><a href="#gallery" id="nav-gallery">படங்கள்</a></li>
+        <li><a href="#booking-section" id="nav-booking">முன்பதிவு</a></li>
+        <li><a href="#contact" id="nav-contact" class="nav-cta">தொடர்பு</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="lamp-icon">🪔</span>
+        வல்லவாரி &bull; தஞ்சாவூர் மாவட்டம் &bull; 614801
+        <span class="lamp-icon">🪔</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-small">ஸ்ரீ பழனி முருகன்</span>
+        <span class="hero-title-main">விழா அரங்கம்</span>
+      </h1>
+      <p class="hero-english">Sri Palani Murugan Vizha Arangam</p>
+      <div class="hero-divider">
+        <span>──</span> <span class="divider-star">❋</span> <span>──</span>
+      </div>
+      <p class="hero-tagline">
+        திருமணம் &nbsp;·&nbsp; காதணி விழா &nbsp;·&nbsp; மொய் விருந்து &nbsp;·&nbsp; குடும்ப விசேஷங்கள்
+      </p>
+      <p class="hero-desc">உங்கள் மகிழ்ச்சியான தருணங்களை மறக்கமுடியாத நினைவுகளாக மாற்றும் இடம்</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="hero-book-btn" onclick="openBookingModal()">📅 இப்போதே முன்பதிவு செய்யுங்கள்</button>
+        <a href="#about" class="btn btn-outline" id="hero-learn-btn">ℹ️ மேலும் அறிக</a>
+      </div>
+      <div class="hero-hours-bar">
+        <span>🕔</span>
+        <span>தினசரி திங்கள் – ஞாயிறு &nbsp;|&nbsp; காலை 5:00 – இரவு 10:00</span>
+      </div>
+    </div>
+    <div class="hero-scroll-cue">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE ========== -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>🌸 திருமணம்</span><span class="sep">❋</span>
+      <span>🎀 காதணி விழா</span><span class="sep">❋</span>
+      <span>🍽️ மொய் விருந்து</span><span class="sep">❋</span>
+      <span>🎉 குடும்ப விசேஷங்கள்</span><span class="sep">❋</span>
+      <span>🌺 Sri Palani Murugan Vizha Arangam</span><span class="sep">❋</span>
+      <span>🕉️ வல்லவாரி &bull; தஞ்சாவூர்</span><span class="sep">❋</span>
+      <span>🌸 திருமணம்</span><span class="sep">❋</span>
+      <span>🎀 காதணி விழா</span><span class="sep">❋</span>
+      <span>🍽️ மொய் விருந்து</span><span class="sep">❋</span>
+      <span>🎉 குடும்ப விசேஷங்கள்</span><span class="sep">❋</span>
+      <span>🌺 Sri Palani Murugan Vizha Arangam</span><span class="sep">❋</span>
+      <span>🕉️ வல்லவாரி &bull; தஞ்சாவூர்</span><span class="sep">❋</span>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">அறிமுகம்</span>
+        <h2 class="section-title">எங்களைப் பற்றி</h2>
+        <p class="section-subtitle">About Us</p>
+        <div class="ornament"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-visual-inner">
+            <div class="about-big-icon">🕉️</div>
+            <div class="about-visual-text">
+              <p>ஸ்ரீ பழனி முருகன்</p>
+              <p>விழா அரங்கம்</p>
+            </div>
+            <div class="about-corner tl"></div>
+            <div class="about-corner tr"></div>
+            <div class="about-corner bl"></div>
+            <div class="about-corner br"></div>
+          </div>
+          <div class="about-location-chip">
+            <span>📍</span>
+            <div>
+              <strong>வல்லவாரி</strong>
+              <small>Vallavari, TN 614801</small>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-block">
+          <p class="about-greeting">🙏 வணக்கம்!</p>
+          <h3>உங்கள் விசேஷ தருணங்களுக்கான சிறந்த இடம்</h3>
+          <p>
+            <strong>ஸ்ரீ பழனி முருகன் விழா அரங்கம்</strong> தஞ்சாவூர் மாவட்டம், பேராவூரணி/பட்டுக்கோட்டை வட்டம், <strong>வல்லவாரி</strong> கிராமத்தில் அமைந்துள்ள ஒரு பிரபலமான திருமண மற்றும் விசேஷ விழா மண்டபமாகும்.
+          </p>
+          <p>
+            நல்ல <strong>காற்றோட்டமான</strong> சூழல் மற்றும் <strong>திறந்தவெளி வசதி</strong>யுடன் கூடிய இந்த அழகான அரங்கம், உங்கள் குடும்பத்தினர் மற்றும் நண்பர்களுடன் மகிழ்ச்சியாக கொண்டாட ஏற்ற சிறந்த இடமாகும்.
+          </p>
+          <p class="about-english-desc">
+            Sri Palani Murugan Vizha Arangam is a renowned function hall located in Vallavari village, Peravurani / Pattukottai Taluk, Thanjavur District — perfect for weddings and all family celebrations.
+          </p>
+          <div class="about-stats-row">
+            <div class="about-stat" id="stat-events">
+              <span class="stat-emoji">🎊</span>
+              <strong>அனைத்து</strong>
+              <small>விசேஷங்கள்</small>
+            </div>
+            <div class="about-stat" id="stat-hours">
+              <span class="stat-emoji">🕐</span>
+              <strong>17 மணி</strong>
+              <small>நேர சேவை</small>
+            </div>
+            <div class="about-stat" id="stat-days">
+              <span class="stat-emoji">📅</span>
+              <strong>7 நாட்கள்</strong>
+              <small>வாரமும் திறந்திருக்கும்</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EVENTS ========== -->
+  <section class="events section" id="events">
+    <div class="events-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag light-tag">நிகழ்வுகள்</span>
+        <h2 class="section-title light-title">எந்த விசேஷத்திற்கும் ஏற்றது</h2>
+        <p class="section-subtitle light-sub">Events & Occasions</p>
+        <div class="ornament light-orn"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="events-grid">
+        <div class="event-card" id="event-marriage">
+          <div class="event-icon-ring"><span>💍</span></div>
+          <div class="event-ribbon"></div>
+          <h3>திருமணம்</h3>
+          <p class="event-eng-label">Marriage / Wedding</p>
+          <p class="event-desc">உங்கள் புனிதமான திருமண நாளை இனிமையான சூழலில் கொண்டாடுங்கள். மணமக்களின் கனவு நிறைவேறும் இடம்.</p>
+          <div class="event-popular-tag">⭐ Most Popular</div>
+        </div>
+        <div class="event-card" id="event-ear">
+          <div class="event-icon-ring"><span>👶</span></div>
+          <div class="event-ribbon"></div>
+          <h3>காதணி விழா</h3>
+          <p class="event-eng-label">Ear Piercing Ceremony</p>
+          <p class="event-desc">உங்கள் செல்லக்குழந்தையின் காதணி விழாவை சிறப்பாக, அன்புமிக்க சூழலில் கொண்டாடுங்கள்.</p>
+        </div>
+        <div class="event-card" id="event-moi">
+          <div class="event-icon-ring"><span>🍽️</span></div>
+          <div class="event-ribbon"></div>
+          <h3>மொய் விருந்து</h3>
+          <p class="event-eng-label">Moi Virunthu</p>
+          <p class="event-desc">உறவினர்களுடனும் நண்பர்களுடனும் மகிழ்ச்சியான பந்தியோடு உணவு உண்ண ஏற்ற இடம்.</p>
+        </div>
+        <div class="event-card" id="event-family">
+          <div class="event-icon-ring"><span>🎉</span></div>
+          <div class="event-ribbon"></div>
+          <h3>குடும்ப விசேஷங்கள்</h3>
+          <p class="event-eng-label">Family Celebrations</p>
+          <p class="event-desc">பிறந்தநாள், வளைகாப்பு, பூஜை, நிறைமாத விழா உள்ளிட்ட அனைத்து குடும்ப நிகழ்வுகளும் வரவேற்கப்படுகின்றன.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">வசதிகள்</span>
+        <h2 class="section-title">சிறப்பம்சங்கள்</h2>
+        <p class="section-subtitle">Amenities & Highlights</p>
+        <div class="ornament"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card" id="feat-ventilation">
+          <div class="feat-icon">💨</div>
+          <h4>நல்ல காற்றோட்டம்</h4>
+          <p>Good Ventilation — நிகழ்வின் போது அனைவரும் புத்துணர்வுடன் இருக்க சிறந்த காற்றோட்ட வசதி.</p>
+        </div>
+        <div class="feat-card" id="feat-open">
+          <div class="feat-icon">🌿</div>
+          <h4>திறந்தவெளி வசதி</h4>
+          <p>Open Space Facility — விசாலமான திறந்தவெளி பகுதி, கொண்டாட்டங்களுக்கு மிகவும் ஏற்றது.</p>
+        </div>
+        <div class="feat-card" id="feat-beauty">
+          <div class="feat-icon">🌸</div>
+          <h4>அழகிய சூழல்</h4>
+          <p>Beautiful Setting — அழகான அலங்காரங்களுக்கு ஏற்ற, மனம் மகிழ்விக்கும் சூழல்.</p>
+        </div>
+        <div class="feat-card" id="feat-daily">
+          <div class="feat-icon">📅</div>
+          <h4>தினசரி செயல்பாடு</h4>
+          <p>Daily Operations — திங்கள் முதல் ஞாயிறு வரை, காலை 5:00 முதல் இரவு 10:00 மணி வரை.</p>
+        </div>
+        <div class="feat-card" id="feat-location">
+          <div class="feat-icon">📍</div>
+          <h4>சிறந்த அமைவிடம்</h4>
+          <p>Prime Location — வல்லவாரி கிராமத்தில் எளிதாக அடையக்கூடிய சிறந்த இடத்தில்.</p>
+        </div>
+        <div class="feat-card" id="feat-all-events">
+          <div class="feat-icon">🎊</div>
+          <h4>அனைத்து விசேஷங்கள்</h4>
+          <p>All Occasions — திருமணம் முதல் குழந்தை விழாவரை அனைத்து நிகழ்வுகளும் வரவேற்கப்படும்.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMINGS BANNER ========== -->
+  <section class="timings-section" id="timings">
+    <div class="container">
+      <div class="timings-card">
+        <div class="timings-left">
+          <span>🪔</span>
+          <div>
+            <h3>இயங்கும் நேரம்</h3>
+            <p>Working Hours</p>
+          </div>
+          <span>🪔</span>
+        </div>
+        <div class="timings-divider-line"></div>
+        <div class="timings-center">
+          <div class="time-block">
+            <span class="time-emoji">🌅</span>
+            <div>
+              <strong>காலை 5:00</strong>
+              <small>Morning Opens</small>
+            </div>
+          </div>
+          <span class="time-dash">——</span>
+          <div class="time-block">
+            <span class="time-emoji">🌙</span>
+            <div>
+              <strong>இரவு 10:00</strong>
+              <small>Night Closes</small>
+            </div>
+          </div>
+        </div>
+        <div class="timings-divider-line"></div>
+        <div class="timings-right">
+          <div class="days-pill">
+            <span>📅</span> திங்கள் – ஞாயிறு
+          </div>
+          <small>Monday – Sunday | Every Day</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">படங்கள்</span>
+        <h2 class="section-title">கேலரி</h2>
+        <p class="section-subtitle">Photo Gallery</p>
+        <div class="ornament"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gal-item gal-large" id="gal-1">
+          <div class="gal-inner">
+            <span class="gal-emoji">🌺</span>
+            <p>திருமண அரங்கம்</p>
+            <small>Wedding Hall</small>
+          </div>
+        </div>
+        <div class="gal-item" id="gal-2">
+          <div class="gal-inner">
+            <span class="gal-emoji">🪔</span>
+            <p>விழா அலங்காரம்</p>
+            <small>Festive Décor</small>
+          </div>
+        </div>
+        <div class="gal-item" id="gal-3">
+          <div class="gal-inner">
+            <span class="gal-emoji">💐</span>
+            <p>மணிமண்டபம்</p>
+            <small>Mandapam</small>
+          </div>
+        </div>
+        <div class="gal-item" id="gal-4">
+          <div class="gal-inner">
+            <span class="gal-emoji">🎊</span>
+            <p>நிகழ்வுகள்</p>
+            <small>Celebrations</small>
+          </div>
+        </div>
+        <div class="gal-item" id="gal-5">
+          <div class="gal-inner">
+            <span class="gal-emoji">🌸</span>
+            <p>பூ அலங்காரம்</p>
+            <small>Floral Decor</small>
+          </div>
+        </div>
+      </div>
+      <p class="gallery-note">📸 உங்கள் படங்களை எங்களிடம் பகிர்ந்து கொள்ளுங்கள் — Share your memories with us!</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">தொடர்பு</span>
+        <h2 class="section-title">எங்களை அணுகுங்கள்</h2>
+        <p class="section-subtitle">Contact & Location</p>
+        <div class="ornament"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card" id="contact-address">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h4>முகவரி <span class="en-label">Address</span></h4>
+              <p>ஸ்ரீ பழனி முருகன் விழா அரங்கம்,<br/>
+                வல்லவாரி கிராமம்,<br/>
+                பேராவூரணி / பட்டுக்கோட்டை வட்டம்,<br/>
+                தஞ்சாவூர் மாவட்டம்,<br/>
+                தமிழ்நாடு – <strong>614801</strong>
+              </p>
+            </div>
+          </div>
+          <div class="info-card" id="contact-hours-card">
+            <div class="info-icon">🕐</div>
+            <div class="info-content">
+              <h4>இயங்கும் நேரம் <span class="en-label">Hours</span></h4>
+              <p>திங்கள் – ஞாயிறு (Mon – Sun)<br/>
+                <strong>காலை 5:00 – இரவு 10:00</strong><br/>
+                Daily: 5:00 AM – 10:00 PM
+              </p>
+            </div>
+          </div>
+          <div class="info-card" id="contact-booking-card">
+            <div class="info-icon">📅</div>
+            <div class="info-content">
+              <h4>முன்பதிவு <span class="en-label">Booking</span></h4>
+              <p>உங்கள் விசேஷ நாளை முன்பதிவு செய்ய நேரில் வருகை தரவும் அல்லது தொடர்பு கொள்ளவும்.<br/><em>Visit in person or call to book your special day.</em></p>
+            </div>
+          </div>
+          <div class="info-card" id="contact-bank-card">
+            <div class="info-icon">🏛️</div>
+            <div class="info-content">
+              <h4>வங்கி கணக்கு விவரம் <span class="en-label">Official Bank Details</span></h4>
+              <p>
+                <strong>A/C:</strong> 500101011234567<br/>
+                <strong>IFSC:</strong> IDIB000P045 (Indian Bank)<br/>
+                <strong>UPI:</strong> sripalanimurugan@upi<br/>
+                <em>பேராவூரணி கிளை, தஞ்சாவூர் – 614801</em>
+              </p>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/search/Sri+Palani+Murugan+Vizha+Arangam+Vallavari+614801+Tamil+Nadu" target="_blank" rel="noopener" class="directions-btn" id="get-directions-btn">
+            🗺️ &nbsp;வழித்தடம் பெறுக | Get Directions
+          </a>
+        </div>
+        <div class="map-block">
+          <div class="map-container">
+            <iframe
+              id="google-map"
+              title="Sri Palani Murugan Vizha Arangam Location Map"
+              src="https://maps.google.com/maps?q=Vallavari,+Peravurani+Taluk,+Thanjavur+District,+Tamil+Nadu+614801&z=14&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="map-footer-label">
+              <span>📍</span> வல்லவாரி, தஞ்சாவூர் மாவட்டம் – 614801
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-brand-block">
+          <div class="footer-om">🕉</div>
+          <h3>ஸ்ரீ பழனி முருகன் விழா அரங்கம்</h3>
+          <p class="footer-eng-name">Sri Palani Murugan Vizha Arangam</p>
+          <p class="footer-location-txt">வல்லவாரி, தஞ்சாவூர் மாவட்டம் – 614801</p>
+        </div>
+        <div class="footer-quick-links">
+          <h4>விரைவு இணைப்புகள்</h4>
+          <ul>
+            <li><a href="#home">முகப்பு</a></li>
+            <li><a href="#about">அறிமுகம்</a></li>
+            <li><a href="#events">நிகழ்வுகள்</a></li>
+            <li><a href="#features">வசதிகள்</a></li>
+            <li><a href="#contact">தொடர்பு</a></li>
+          </ul>
+        </div>
+        <div class="footer-event-list">
+          <h4>நிகழ்வுகள்</h4>
+          <ul>
+            <li>💍 திருமணம் (Marriage)</li>
+            <li>👶 காதணி விழா (Ear Piercing)</li>
+            <li>🍽️ மொய் விருந்து (Moi Virunthu)</li>
+            <li>🎉 குடும்ப விசேஷங்கள்</li>
+          </ul>
+        </div>
+        <div class="footer-hours-block">
+          <h4>இயங்கும் நேரம்</h4>
+          <p>🪔 திங்கள் – ஞாயிறு</p>
+          <p>⏰ காலை 5:00 – இரவு 10:00</p>
+          <p class="footer-eng-hours">Mon–Sun | 5:00 AM – 10:00 PM</p>
+          <a href="https://www.google.com/maps/search/Sri+Palani+Murugan+Vizha+Arangam+Vallavari+614801" target="_blank" rel="noopener" class="footer-dir-link" id="footer-directions">
+            📍 வழித்தடம் பெறுக
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2024 ஸ்ரீ பழனி முருகன் விழா அரங்கம் — வல்லவாரி, தஞ்சாவூர் – 614801</p>
+        <p class="footer-blessing">வேல் முருகன் துணை! 🙏</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BOOKING SECTION ========== -->
+  <section class="booking-section section" id="booking-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ஆன்லைன் முன்பதிவு</span>
+        <h2 class="section-title">இப்போதே முன்பதிவு செய்யுங்கள்</h2>
+        <p class="section-subtitle">Online Booking & Payment</p>
+        <div class="ornament"><span>──</span><span class="orn-flower">✿</span><span>──</span></div>
+      </div>
+      <div class="booking-cta-grid">
+        <div class="booking-cta-card">
+          <div class="bk-cta-icon">📅</div>
+          <h3>எளிதான முன்பதிவு</h3>
+          <p>3 எளிய படிகளில் உங்கள் விசேஷ நாளை உறுதி செய்யுங்கள்</p>
+          <p class="bk-sub">Book in 3 simple steps</p>
+        </div>
+        <div class="booking-cta-card">
+          <div class="bk-cta-icon">💳</div>
+          <h3>பாதுகாப்பான கட்டணம்</h3>
+          <p>UPI, கார்டு அல்லது நெட் பேங்கிங் மூலம் பாதுகாப்பாக கட்டுங்கள்</p>
+          <p class="bk-sub">UPI / Card / Net Banking</p>
+        </div>
+        <div class="booking-cta-card">
+          <div class="bk-cta-icon">✅</div>
+          <h3>உடனடி உறுதிப்படுத்தல்</h3>
+          <p>முன்பதிவு உறுதிப்படுத்தல் உடனடியாக வழங்கப்படும்</p>
+          <p class="bk-sub">Instant confirmation</p>
+        </div>
+      </div>
+      <div class="booking-open-btn-wrap">
+        <button class="btn btn-primary btn-large" id="open-booking-modal-btn" onclick="openBookingModal()">
+          📅 &nbsp; இப்போதே முன்பதிவு செய்யுங்கள் | Book Now
+        </button>
+        <p class="booking-note">🔒 உங்கள் தகவல்கள் பாதுகாப்பாக வைக்கப்படும் | Your data is secure</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING MODAL ========== -->
+  <div class="bk-modal-overlay" id="bookingModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="bk-modal" id="bookingModal">
+
+      <!-- Modal Header -->
+      <div class="bk-modal-header">
+        <div class="bk-modal-brand">
+          <span class="bk-om">🕉️</span>
+          <div>
+            <p class="bk-brand-name">ஸ்ரீ பழனி முருகன் விழா அரங்கம்</p>
+            <p class="bk-brand-sub">Online Booking</p>
+          </div>
+        </div>
+        <button class="bk-close" id="closeBookingModal" aria-label="Close booking modal" onclick="closeBookingModal()">&times;</button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="bk-progress">
+        <div class="bk-step" id="bk-step-1-dot">
+          <div class="bk-step-dot active"><span>1</span></div>
+          <p>நிகழ்வு விவரம்</p>
+        </div>
+        <div class="bk-progress-line" id="bk-line-1"></div>
+        <div class="bk-step" id="bk-step-2-dot">
+          <div class="bk-step-dot"><span>2</span></div>
+          <p>தகவல்கள்</p>
+        </div>
+        <div class="bk-progress-line" id="bk-line-2"></div>
+        <div class="bk-step" id="bk-step-3-dot">
+          <div class="bk-step-dot"><span>3</span></div>
+          <p>கட்டணம்</p>
+        </div>
+      </div>
+
+      <div class="bk-modal-body">
+
+        <!-- ── STEP 1: Event Details ── -->
+        <div class="bk-form-step active" id="bk-step-1">
+          <h3 class="bk-step-title">நிகழ்வு விவரங்கள் <span>Event Details</span></h3>
+          <div class="bk-form-grid">
+            <div class="bk-field bk-field-full">
+              <label for="bk-event-type">நிகழ்வு வகை <span class="req">*</span> <em>Event Type</em></label>
+              <select id="bk-event-type" required>
+                <option value="">-- நிகழ்வு வகையை தேர்வு செய்யுங்கள் --</option>
+                <option value="marriage">💍 திருமணம் (Marriage)</option>
+                <option value="ear-piercing">👶 காதணி விழா (Ear Piercing)</option>
+                <option value="moi-virunthu">🍽️ மொய் விருந்து (Moi Virunthu)</option>
+                <option value="birthday">🎂 பிறந்தநாள் (Birthday)</option>
+                <option value="valaikapu">🤰 வளைகாப்பு (Baby Shower)</option>
+                <option value="puja">🪔 பூஜை / விழா (Puja / Other)</option>
+                <option value="other">🎉 பிற குடும்ப விசேஷம் (Other)</option>
+              </select>
+            </div>
+            <div class="bk-field">
+              <label for="bk-event-date">நிகழ்வு தேதி <span class="req">*</span> <em>Event Date</em></label>
+              <input type="date" id="bk-event-date" required min="" />
+              <small class="bk-field-hint" id="bk-date-range-hint">📅 அடுத்த 30 நாட்களுக்குள் முன்பதிவு செய்யலாம் (Within 30 Days)</small>
+            </div>
+            <div class="bk-field">
+              <label for="bk-event-time">நேரம் <span class="req">*</span> <em>Time Slot</em></label>
+              <select id="bk-event-time" required>
+                <option value="">-- நேரம் தேர்வு செய்யுங்கள் --</option>
+                <option value="morning">🌅 காலை (5:00 AM – 12:00 PM)</option>
+                <option value="afternoon">☀️ பகல் (12:00 PM – 5:00 PM)</option>
+                <option value="evening">🌆 மாலை (5:00 PM – 10:00 PM)</option>
+                <option value="fullday">🌟 முழு நாள் (Full Day)</option>
+              </select>
+            </div>
+            <div class="bk-field bk-field-full" id="bk-availability-wrap" style="display:none;">
+              <div class="bk-avail-banner" id="bk-availability-banner"></div>
+            </div>
+            <div class="bk-field">
+              <label for="bk-guests">விருந்தினர் எண்ணிக்கை <span class="req">*</span> <em>Guest Count</em></label>
+              <input type="number" id="bk-guests" min="10" max="2000" placeholder="எ.கா. 200" required />
+            </div>
+            <div class="bk-field bk-field-full">
+              <label for="bk-requirements">சிறப்பு தேவைகள் <em>Special Requirements</em></label>
+              <textarea id="bk-requirements" rows="3" placeholder="சிறப்பு ஏற்பாடுகள் ஏதேனும் இருந்தால் இங்கே குறிப்பிடவும்..."></textarea>
+            </div>
+          </div>
+          <div class="bk-booking-estimate" id="bk-estimate">
+            <div class="bk-estimate-inner">
+              <span>📋 தேர்ந்தெடுத்த நிகழ்வு:</span>
+              <span id="bk-estimate-event">—</span>
+              <span class="bk-est-sep">|</span>
+              <span>📅</span>
+              <span id="bk-estimate-date">தேதி தேர்வு செய்யவும்</span>
+            </div>
+          </div>
+          <div class="bk-step-actions">
+            <button class="btn-bk-next" id="bk-next-1" onclick="goToStep(2)">தொடரவும் →</button>
+          </div>
+        </div>
+
+        <!-- ── STEP 2: Personal Details ── -->
+        <div class="bk-form-step" id="bk-step-2">
+          <h3 class="bk-step-title">தனிப்பட்ட தகவல்கள் <span>Personal Details</span></h3>
+          <div class="bk-form-grid">
+            <div class="bk-field">
+              <label for="bk-name">முழு பெயர் <span class="req">*</span> <em>Full Name</em></label>
+              <input type="text" id="bk-name" placeholder="உங்கள் பெயர்" required />
+            </div>
+            <div class="bk-field">
+              <label for="bk-phone">மொபைல் எண் <span class="req">*</span> <em>Mobile Number</em></label>
+              <input type="tel" id="bk-phone" placeholder="+91 XXXXX XXXXX" maxlength="10" required />
+            </div>
+            <div class="bk-field">
+              <label for="bk-email">மின்னஞ்சல் <em>Email (optional)</em></label>
+              <input type="email" id="bk-email" placeholder="yourmail@gmail.com" />
+            </div>
+            <div class="bk-field">
+              <label for="bk-village">ஊர் / கிராமம் <em>Village / Town</em></label>
+              <input type="text" id="bk-village" placeholder="உங்கள் ஊர் பெயர்" />
+            </div>
+            <div class="bk-field bk-field-full">
+              <label for="bk-address">முகவரி <em>Address</em></label>
+              <textarea id="bk-address" rows="2" placeholder="உங்கள் முழு முகவரி..."></textarea>
+            </div>
+          </div>
+          <div class="bk-step-actions">
+            <button class="btn-bk-back" onclick="goToStep(1)">← திரும்பு</button>
+            <button class="btn-bk-next" id="bk-next-2" onclick="goToStep(3)">கட்டணத்திற்கு செல்க →</button>
+          </div>
+        </div>
+
+        <!-- ── STEP 3: Payment ── -->
+        <div class="bk-form-step" id="bk-step-3">
+          <h3 class="bk-step-title">கட்டண விவரங்கள் <span>Payment</span></h3>
+
+          <!-- Booking Summary -->
+          <div class="bk-summary">
+            <h4>📋 முன்பதிவு சுருக்கம் | Booking Summary</h4>
+            <div class="bk-summary-grid">
+              <div class="bk-sum-row"><span>நிகழ்வு வகை:</span><strong id="sum-event">—</strong></div>
+              <div class="bk-sum-row"><span>நிகழ்வு தேதி:</span><strong id="sum-date">—</strong></div>
+              <div class="bk-sum-row"><span>நேரம்:</span><strong id="sum-time">—</strong></div>
+              <div class="bk-sum-row"><span>விருந்தினர்:</span><strong id="sum-guests">—</strong></div>
+              <div class="bk-sum-row"><span>பெயர்:</span><strong id="sum-name">—</strong></div>
+              <div class="bk-sum-row"><span>மொபைல்:</span><strong id="sum-phone">—</strong></div>
+            </div>
+            <div class="bk-amount-row">
+              <span>முன்பணம் (Advance / Token Amount)</span>
+              <span class="bk-amount" id="bk-advance-amount">₹ 5,000</span>
+            </div>
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="bk-payment-section">
+            <h4>கட்டண முறை தேர்வு <em>Choose Payment Method</em></h4>
+            <div class="bk-payment-tabs">
+              <button class="bk-pay-tab active" id="tab-upi" onclick="switchPayTab('upi')">📱 UPI / QR</button>
+              <button class="bk-pay-tab" id="tab-bank" onclick="switchPayTab('bank')">🏛️ வங்கி கணக்கு (Bank Details)</button>
+              <button class="bk-pay-tab" id="tab-card" onclick="switchPayTab('card')">💳 Card</button>
+            </div>
+
+            <!-- UPI Tab -->
+            <div class="bk-pay-panel active" id="panel-upi">
+              <div class="upi-grid">
+                <div class="qr-section">
+                  <div class="qr-placeholder" id="upi-qr-box">
+                    <div class="qr-inner">
+                      <div class="qr-corner tl"></div><div class="qr-corner tr"></div>
+                      <div class="qr-corner bl"></div><div class="qr-corner br"></div>
+                      <div class="qr-body">
+                        <div class="qr-row"><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div></div>
+                        <div class="qr-row"><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div></div>
+                        <div class="qr-row"><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div></div>
+                        <div class="qr-row"><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div></div>
+                        <div class="qr-row"><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div></div>
+                        <div class="qr-row"><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div></div>
+                        <div class="qr-row"><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell dark"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="qr-scan-txt">📸 ஏதேனும் ஒரு UPI செயலி மூலம் QR Code ஸ்கேன் செய்க</p>
+                </div>
+                <div class="upi-id-section">
+                  <p class="upi-label">அல்லது UPI ID-க்கு நேரடியாக செலுத்துங்கள்</p>
+                  <div class="upi-id-box">
+                    <span class="upi-id-text" id="upi-id-display">sripalanimurugan@upi</span>
+                    <button class="upi-copy-btn" onclick="copyUPI()" id="upi-copy-btn">📋 Copy</button>
+                  </div>
+                  <div class="upi-apps">
+                    <div class="upi-app-btn" id="pay-gpay" onclick="triggerUPIApp('gpay')">
+                      <span>G</span><small>Pay</small>
+                    </div>
+                    <div class="upi-app-btn" id="pay-phonepe" onclick="triggerUPIApp('phonepe')">
+                      <span>📱</span><small>PhonePe</small>
+                    </div>
+                    <div class="upi-app-btn" id="pay-paytm" onclick="triggerUPIApp('paytm')">
+                      <span>P</span><small>Paytm</small>
+                    </div>
+                    <div class="upi-app-btn" id="pay-bhim" onclick="triggerUPIApp('bhim')">
+                      <span>🏦</span><small>BHIM</small>
+                    </div>
+                  </div>
+                  <div class="upi-ref-field">
+                    <label for="upi-txn-id">கட்டணம் செய்த பிறகு UTR/Transaction ID:</label>
+                    <input type="text" id="upi-txn-id" placeholder="UTR12345678..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Tab -->
+            <div class="bk-pay-panel" id="panel-card">
+              <div class="card-form">
+                <div class="bk-field bk-field-full">
+                  <label for="card-name">அட்டையில் உள்ள பெயர் <em>Name on Card</em></label>
+                  <input type="text" id="card-name" placeholder="JOHN DOE" />
+                </div>
+                <div class="bk-field bk-field-full">
+                  <label for="card-number">அட்டை எண் <em>Card Number</em></label>
+                  <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" oninput="formatCard(this)" />
+                </div>
+                <div class="bk-field">
+                  <label for="card-expiry">காலாவதி தேதி <em>Expiry (MM/YY)</em></label>
+                  <input type="text" id="card-expiry" placeholder="MM / YY" maxlength="5" oninput="formatExpiry(this)" />
+                </div>
+                <div class="bk-field">
+                  <label for="card-cvv">CVV <em>Security Code</em></label>
+                  <input type="password" id="card-cvv" placeholder="•••" maxlength="3" />
+                </div>
+                <div class="card-security-note">
+                  🔒 256-bit SSL Encrypted | PCI DSS Compliant
+                </div>
+              </div>
+            </div>
+
+            <!-- Net Banking Tab -->
+            <!-- Direct Bank Transfer Tab -->
+            <div class="bk-pay-panel" id="panel-bank">
+              <div class="bank-details-card">
+                <div class="bank-card-header">
+                  <span class="bank-badge">🏛️ அதிகாரப்பூர்வ வங்கி கணக்கு விவரங்கள் | Official Bank Details</span>
+                </div>
+                <div class="bank-card-grid">
+                  <div class="bank-item">
+                    <span class="bank-label">👤 கணக்கு உரிமையாளர் (Account Name):</span>
+                    <div class="bank-val-wrap">
+                      <strong class="bank-val" id="disp-acc-name">ஸ்ரீ பழனி முருகன் விழா அரங்கம்</strong>
+                      <button class="bank-copy-mini" onclick="copyText('disp-acc-name', this)">📋 Copy</button>
+                    </div>
+                  </div>
+                  <div class="bank-item">
+                    <span class="bank-label">🏦 வங்கி பெயர் (Bank Name):</span>
+                    <strong class="bank-val" id="disp-bank-name">இந்தியன் வங்கி (Indian Bank)</strong>
+                  </div>
+                  <div class="bank-item">
+                    <span class="bank-label">🔢 கணக்கு எண் (Account Number):</span>
+                    <div class="bank-val-wrap">
+                      <strong class="bank-val bank-highlight" id="disp-acc-num">500101011234567</strong>
+                      <button class="bank-copy-mini" onclick="copyText('disp-acc-num', this)">📋 Copy</button>
+                    </div>
+                  </div>
+                  <div class="bank-item">
+                    <span class="bank-label">🏛️ IFSC குறியீடு (IFSC Code):</span>
+                    <div class="bank-val-wrap">
+                      <strong class="bank-val bank-highlight" id="disp-ifsc">IDIB000P045</strong>
+                      <button class="bank-copy-mini" onclick="copyText('disp-ifsc', this)">📋 Copy</button>
+                    </div>
+                  </div>
+                  <div class="bank-item">
+                    <span class="bank-label">📍 கிளை (Branch):</span>
+                    <strong class="bank-val" id="disp-branch">பேராவூரணி கிளை, தஞ்சாவூர் மாவட்டம் – 614801</strong>
+                  </div>
+                  <div class="bank-item">
+                    <span class="bank-label">📱 GPay / PhonePe எண் (Direct Mobile):</span>
+                    <div class="bank-val-wrap">
+                      <strong class="bank-val" id="disp-phone">+91 94431 23456</strong>
+                      <button class="bank-copy-mini" onclick="copyText('disp-phone', this)">📋 Copy</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="bank-help-note">
+                  ℹ️ <strong>குறிப்பு:</strong> நெட்பேங்கிங் (NEFT / IMPS / RTGS) மூலம் முன்பணம் செலுத்திவிட்டு, அந்த பரிவர்த்தனை எண்ணை கீழே உள்ளிடவும்.
+                </div>
+                <div class="upi-ref-field" style="margin-top: 14px;">
+                  <label for="bank-txn-id">வங்கி பரிவர்த்தனை / UTR எண் (Transaction Reference ID):</label>
+                  <input type="text" id="bank-txn-id" placeholder="எ.கா: IMPS241012345678 அல்லது Cheque No." />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bk-step-actions">
+            <button class="btn-bk-back" onclick="goToStep(2)">← திரும்பு</button>
+            <button class="btn-bk-pay" id="bk-pay-btn" onclick="processPayment()">
+              🔒 &nbsp; ₹5,000 முன்பணம் செலுத்துங்கள் | Pay Advance
+            </button>
+          </div>
+        </div>
+
+        <!-- ── STEP 4: Success ── -->
+        <div class="bk-form-step" id="bk-step-4">
+          <div class="bk-success">
+            <div class="bk-success-icon">✅</div>
+            <h3 class="bk-success-title">முன்பதிவு வெற்றிகரமாக முடிந்தது!</h3>
+            <p class="bk-success-sub">Booking Confirmed Successfully!</p>
+            <div class="bk-booking-id">
+              <span>Booking ID:</span>
+              <strong id="bk-conf-id">SPMVA-2024-0001</strong>
+            </div>
+            <div class="bk-conf-details">
+              <div class="bk-conf-row"><span>📅 நிகழ்வு:</span><strong id="conf-event">—</strong></div>
+              <div class="bk-conf-row"><span>🗓️ தேதி:</span><strong id="conf-date">—</strong></div>
+              <div class="bk-conf-row"><span>👤 பெயர்:</span><strong id="conf-name">—</strong></div>
+              <div class="bk-conf-row"><span>📞 மொபைல்:</span><strong id="conf-phone">—</strong></div>
+              <div class="bk-conf-row"><span>💰 செலுத்திய தொகை:</span><strong>₹5,000 (Advance)</strong></div>
+            </div>
+            <div class="bk-success-note">
+              <p>🙏 நன்றி! உங்கள் முன்பதிவு உறுதி செய்யப்பட்டது. விரைவில் உங்கள் மொபைலில் SMS வரும்.</p>
+              <p>Thank you! Your booking is confirmed. You will receive an SMS confirmation shortly.</p>
+            </div>
+            <div class="bk-success-actions">
+              <a href="#" id="bk-whatsapp-btn" target="_blank" rel="noopener" class="btn-bk-whatsapp">
+                📲 &nbsp; வாட்ஸ்அப்பில் உறுதி செய்க | WhatsApp Manager
+              </a>
+              <button class="btn-bk-next" onclick="printConfirmation()">🖨️ Print Confirmation</button>
+              <button class="btn-bk-back" onclick="closeBookingModal()">முடிக்க | Done</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <button class="fab" id="floating-book-btn" title="Book Now" onclick="openBookingModal()">
+    📅
+    <span class="fab-label">Book</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

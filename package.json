@@ -1,0 +1,19 @@
+{
+  "name": "palani-murugan-hall",
+  "version": "1.0.0",
+  "description": "Sri Palani Murugan Vizha Arangam - Function Hall Booking Website with Node.js & MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "keywords": ["function-hall", "marriage-hall", "nodejs", "mongodb"],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>நிர்வாகி தளம் | Sri Palani Murugan Vizha Arangam Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --maroon: #5a0f20;
+      --maroon-dark: #3a0814;
+      --gold: #c8973a;
+      --gold-light: #f5d080;
+      --cream: #faf5ed;
+      --white: #ffffff;
+      --text: #2c1a0e;
+      --text-muted: #6b5c52;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+      background: #f4ece1;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .admin-header {
+      background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+      color: var(--white);
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .admin-brand { display: flex; align-items: center; gap: 14px; }
+    .admin-brand .om { font-size: 2rem; color: var(--gold-light); }
+    .admin-brand h1 { font-family: 'Noto Serif Tamil', serif; font-size: 1.25rem; color: var(--gold-light); }
+    .admin-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+    .admin-status-badge {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid #22c55e;
+      color: #86efac;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .admin-status-badge .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+    }
+    .admin-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      width: 100%;
+      flex: 1;
+    }
+    .admin-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(200,151,58,0.25);
+      margin-bottom: 24px;
+    }
+    .admin-card-title {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 1.15rem;
+      color: var(--maroon);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .admin-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat-box {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(200,151,58,0.2);
+      text-align: center;
+    }
+    .stat-box .num { font-size: 1.8rem; font-weight: 900; color: var(--maroon); font-family: 'Inter', sans-serif; }
+    .stat-box .lbl { font-size: 0.82rem; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+    .admin-controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .admin-search {
+      flex: 1;
+      min-width: 240px;
+      padding: 10px 16px;
+      border: 1.5px solid rgba(200,151,58,0.3);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+    .admin-search:focus { outline: none; border-color: var(--gold); }
+    .btn-admin {
+      background: linear-gradient(135deg, var(--maroon), #7a1c2e);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-admin:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-block-date {
+      background: linear-gradient(135deg, #d97706, #b45309);
+    }
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    th {
+      background: var(--cream);
+      color: var(--maroon);
+      padding: 12px 14px;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(200,151,58,0.3);
+      white-space: nowrap;
+    }
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(200,151,58,0.15);
+      vertical-align: middle;
+    }
+    tr:hover td { background: rgba(200,151,58,0.04); }
+    .badge-status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-confirmed { background: #dcfce7; color: #15803d; }
+    .badge-cancelled { background: #fee2e2; color: #b91c1c; }
+    .btn-action-cancel {
+      background: #fee2e2;
+      border: 1px solid #f87171;
+      color: #b91c1c;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-action-cancel:hover { background: #f87171; color: #fff; }
+    .empty-state { text-align: center; padding: 40px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="admin-brand">
+      <span class="om">🕉️</span>
+      <div>
+        <h1>ஸ்ரீ பழனி முருகன் விழா அரங்கம் — நிர்வாகி பலகை</h1>
+        <p>Sri Palani Murugan Vizha Arangam | Online Bookings Management</p>
+      </div>
+    </div>
+    <div class="admin-status-badge" id="db-status-badge">
+      <span class="dot"></span>
+      <span id="db-status-text">MongoDB Connected</span>
+    </div>
+  </header>
+
+  <div class="admin-container">
+
+    <!-- Stats -->
+    <div class="admin-stats-grid">
+      <div class="stat-box">
+        <div class="num" id="stat-total">0</div>
+        <div class="lbl">மொத்த முன்பதிவுகள் (Total Bookings)</div>
+      </div>
+      <div class="stat-box">
+        <div class="num" id="stat-confirmed">0</div>
+        <div class="lbl">உறுதியானவை (Confirmed)</div>
+      </div>
+      <div class="stat-box">
+        <div class="num" id="stat-advance">₹ 0</div>
+        <div class="lbl">பெற்ற முன்பணம் (Advance Received)</div>
+      </div>
+      <div class="stat-box">
+        <div class="num" id="stat-upcoming">0</div>
+        <div class="lbl">வரவிருக்கும் விசேஷங்கள் (Upcoming)</div>
+      </div>
+    </div>
+
+    <!-- Bookings Table Card -->
+    <div class="admin-card">
+      <div class="admin-card-title">
+        <span>📋 வாடிக்கையாளர் முன்பதிவுகள் (Online Bookings List)</span>
+        <div style="display: flex; gap: 10px;">
+          <a href="/" target="_blank" class="btn-admin">🌐 இணையதளத்தை காண்க</a>
+          <button class="btn-admin" onclick="loadBookings()">🔄 புதுப்பிக்க (Refresh)</button>
+        </div>
+      </div>
+
+      <div class="admin-controls">
+        <input type="text" class="admin-search" id="search-input" placeholder="🔍 பெயர், போன் எண், அல்லது தேதி கொண்டு தேடுங்கள்..." oninput="filterBookings()" />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>முன்பதிவு எண்</th>
+              <th>நிகழ்வு</th>
+              <th>தேதி & நேரம்</th>
+              <th>வாடிக்கையாளர்</th>
+              <th>மொபைல்</th>
+              <th>முன்பணம்</th>
+              <th>கட்டண முறை / UTR</th>
+              <th>நிலை</th>
+              <th>செயல்</th>
+            </tr>
+          </thead>
+          <tbody id="bookings-table-body">
+            <tr>
+              <td colspan="9" class="empty-state">முன்பதிவுகள் ஏற்றப்படுகின்றன...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let allBookings = [];
+
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/health');
+        const data = await res.json();
+        const badgeText = document.getElementById('db-status-text');
+        if (badgeText) {
+          badgeText.textContent = data.database;
+        }
+      } catch (e) {
+        document.getElementById('db-status-text').textContent = 'Server Offline';
+      }
+    }
+
+    async function loadBookings() {
+      try {
+        const res = await fetch('/api/bookings');
+        const data = await res.json();
+        allBookings = data.bookings || [];
+        renderTable(allBookings);
+        calculateStats(allBookings);
+      } catch (e) {
+        console.error('Failed loading bookings', e);
+        document.getElementById('bookings-table-body').innerHTML = `
+          <tr><td colspan="9" class="empty-state" style="color:#b91c1c;">முன்பதிவுகளை ஏற்றுவதில் பிழை! Server இயங்குகிறதா என சரிபார்க்கவும்.</td></tr>
+        `;
+      }
+    }
+
+    function calculateStats(bookings) {
+      const active = bookings.filter(b => b.status !== 'cancelled');
+      document.getElementById('stat-total').textContent = bookings.length;
+      document.getElementById('stat-confirmed').textContent = active.length;
+      
+      const totalAdv = active.reduce((acc, b) => acc + (Number(b.advanceAmount) || 0), 0);
+      document.getElementById('stat-advance').textContent = '₹ ' + totalAdv.toLocaleString('en-IN');
+
+      const todayStr = new Date().toISOString().split('T')[0];
+      const upcoming = active.filter(b => b.eventDate >= todayStr).length;
+      document.getElementById('stat-upcoming').textContent = upcoming;
+    }
+
+    function renderTable(bookings) {
+      const tbody = document.getElementById('bookings-table-body');
+      if (!bookings.length) {
+        tbody.innerHTML = `<tr><td colspan="9" class="empty-state">முன்பதிவுகள் ஏதும் இல்லை.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = bookings.map(b => {
+        const isCancelled = b.status === 'cancelled';
+        const dateParts = (b.eventDate || '').split('-');
+        const displayDate = dateParts.length === 3 ? `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}` : b.eventDate;
+
+        return `
+          <tr>
+            <td><strong>${b.bookingId}</strong></td>
+            <td>${b.eventTypeName || b.eventType}</td>
+            <td>
+              <strong>${displayDate}</strong><br/>
+              <small style="color:#6b5c52;">${b.eventTimeName || b.eventTime}</small>
+            </td>
+            <td>
+              <strong>${b.customerName}</strong><br/>
+              <small style="color:#6b5c52;">${b.village || '—'}</small>
+            </td>
+            <td>
+              <a href="tel:${b.customerPhone}" style="color:#5a0f20; font-weight:700; text-decoration:none;">
+                📞 ${b.customerPhone}
+              </a>
+            </td>
+            <td><strong>₹ ${(Number(b.advanceAmount) || 0).toLocaleString('en-IN')}</strong></td>
+            <td>
+              <span style="text-transform:uppercase; font-size:0.75rem; font-weight:700;">${b.paymentMethod || 'UPI'}</span><br/>
+              <small style="font-family:monospace; color:#15803d;">${b.txnId || '—'}</small>
+            </td>
+            <td>
+              <span class="badge-status ${isCancelled ? 'badge-cancelled' : 'badge-confirmed'}">
+                ${isCancelled ? 'ரத்து செய்யப்பட்டது' : 'உறுதியானது'}
+              </span>
+            </td>
+            <td>
+              ${!isCancelled ? `
+                <button class="btn-action-cancel" onclick="cancelBooking('${b.bookingId}')">
+                  ரத்து செய்க (Cancel)
+                </button>
+              ` : '—'}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function filterBookings() {
+      const q = document.getElementById('search-input').value.toLowerCase().trim();
+      if (!q) {
+        renderTable(allBookings);
+        return;
+      }
+      const filtered = allBookings.filter(b => 
+        (b.customerName && b.customerName.toLowerCase().includes(q)) ||
+        (b.customerPhone && b.customerPhone.includes(q)) ||
+        (b.eventDate && b.eventDate.includes(q)) ||
+        (b.bookingId && b.bookingId.toLowerCase().includes(q)) ||
+        (b.eventTypeName && b.eventTypeName.toLowerCase().includes(q))
+      );
+      renderTable(filtered);
+    }
+
+    async function cancelBooking(id) {
+      if (!confirm(`முன்பதிவு ${id}-ஐ ரத்து செய்ய விரும்புகிறீர்களா? இதனால் அந்த தேதி மீண்டும் பிறருக்கு முன்பதிவுக்கு கிடைக்கும்.`)) {
+        return;
+      }
+      try {
+        const res = await fetch(`/api/bookings/${id}`, { method: 'DELETE' });
+        const data = await res.json();
+        alert(data.message || 'முன்பதிவு ரத்து செய்யப்பட்டது!');
+        loadBookings();
+      } catch (e) {
+        alert('ரத்து செய்வதில் பிழை ஏற்பட்டது.');
+      }
+    }
+
+    // Init
+    checkHealth();
+    loadBookings();
+  </script>
+</body>
+</html>
